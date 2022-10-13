@@ -12,7 +12,8 @@ builder.Services.AddSignalR();
 
 builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
 {
-    builder.WithOrigins(crossOrigin, "*").AllowAnyMethod().AllowAnyHeader().AllowCredentials();
+    //builder.WithOrigins(crossOrigin, "*").AllowAnyMethod().AllowAnyHeader().AllowCredentials();
+    builder.WithOrigins("*");
 }));
 
 var app = builder.Build();
